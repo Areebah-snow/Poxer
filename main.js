@@ -1,50 +1,50 @@
 const counters = document.querySelectorAll(".counters span");
-const container = document.querySelectorAll(".counters");
+const container = document.querySelector(".counters");
 
 let activated = false;
 
-window.addEventListener("scroll",() => {
-    /*If the page is scrolled to the containers elemetn and the counter are not activated */
-    
-    if(
-        pageYOffset > container.offsetTop - container.offsetHeight - 50 && activated === false
-    ){
-        counters.forEach(counter => {
-            
-        //set counter values to zero
-            counter.innerText = 0;
-        //set count variable to track count
-        let count = 0;
+window.addEventListener("scroll", () => {
+  /* If the page is scrolled to the containers element and the counters are not activated */
+  if (
+    isElementInViewport(container) &&
+    activated === false
+  ) {
+    activated = true;
 
-        //Update count function
-        function updateCount(){
-            //gET COUNTER TARGET NUMBNER TO COUNT TO 
+    counters.forEach((counter) => {
+      // Set counter values to zero
+      counter.innerText = 0;
+      // Set count variable to track count
+      let count = 0;
 
-            const target = parseInt(counter.dataset.count);
-            if(count < target){
-                count++;
-                counter.innerText =  count;
-                setTimeout(updateCount,10)
-            }
-            else{
-                counter.innerText =  target
-            }
+      // Get counter target number to count to
+      const target = parseInt(counter.dataset.count);
 
+      // Calculate the increment value based on the target and animation duration
+      const increment = Math.ceil(target / 100);
+
+      // Update count function
+      function updateCount() {
+        if (count < target) {
+          count += increment;
+          counter.innerText = Math.min(count, target);
+          requestAnimationFrame(updateCount);
         }
-        //Run the fintion initially
-        updateCount();
-        //set activated to true
-        activated = true;
-        });
+      }
 
-    } else if(
-        pageYOffset < container.offsetTop -container.offsetHeight - 300 || pageYOffset === 0 && activated === true){
-            counters.forEach(counter =>{
-                //set counter bacl to zero
-                counter.innerText = 0;
-            });
-            //set activated to false
-            activated =  false;
-        }
-
+      // Run the function
+      updateCount();
+    });
+  }
 });
+
+// Helper function to check if an element is in the viewport
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
