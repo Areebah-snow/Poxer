@@ -131,12 +131,12 @@ section{
 
 .counters{
     padding: 3em 2em;
-    background-color: #ab7343;
-    color: white;
+
+    color: black;
     text-align: center;
 }
 
-.counters >div{
+.counters > div{
     max-width: 900px;
     margin: 0 auto;
     display: grid;
@@ -144,12 +144,38 @@ section{
     gap: 4em 2em;
 }
 
+.counter-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .counter{
     position: relative;
+    text-align: left;
+    margin-left: 15px;
+}
+.counter-image{
+     background-color: #ab7343;
+     border-radius: 50%;
+     
+}
+
+.counter-image img{
+    
+    display: inline-block;
+    padding: 10px;
+    width: 65px;
+    
+
 }
 .counter h1{
-    font-size: 3em;
-    margin-bottom: 0.5em;
+    font-size: 2em;
+    margin-bottom: ;
+}
+
+.counter p{
+    font-size: 13px;
 }
 
 .counter:not(:last-child)::before{
@@ -162,7 +188,103 @@ section{
     transform: translateY(-50%);
     right: -1em;
 }
+.courses-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.courses-heading h1::after{
+    content: '';
 
+    width: 80px;
+    height: 4px;
+    display: block;
+    background-color: #ab7343;
+    margin-top: 7px
+    
+}
+
+.courses-heading a{
+   
+    padding: 8px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 13px;
+    align-self: baseline;
+}
+.price{
+    position: relative;
+    top: -10px;
+    background-color: #ab7343;
+    color: white;
+    font-weight: bold;
+    padding: 5px 3px;
+    left: 280px;
+    border-radius: 3px;
+}
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    row-gap: 10px;
+}
+.course{
+    width: 350px;
+   
+    background-color: white;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-block: 30px;
+    box-shadow: 0 1px 3px 0 burlywood;
+}
+.course-img{
+    overflow: hidden;
+}
+.course-img img{
+    width: 350px;
+    transition: all 180ms linear;
+}
+
+.course-img img:hover{
+    transform: scale(1.1);
+}
+.course-details{
+    margin: 0px 15px;
+}
+
+.course-details h2{
+    font-size: 1.3rem;
+}
+.rating{
+    margin-block: 10px;
+}
+.rating span{
+    font-size: 14px;
+    color: grey;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+.course-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 10px;
+}
+
+.type{
+    display: flex;
+    align-items: center;
+    margin-block: 8px;
+}
+.type img{
+    width: 20px;
+}
+.type p{
+    font-size: 12px;
+    margin-left: 5px;
+}
+   
 @media  screen and (max-width: 900px) and (min-width:501px) {
     .counters > div{
         grid-template-columns: 1fr 1fr;

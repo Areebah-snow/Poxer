@@ -1,15 +1,15 @@
-const counters = document.querySelectorAll(".counters span")
-const container = document.querySelectorAll(".counters")
+const counters = document.querySelectorAll(".counters span");
+const container = document.querySelectorAll(".counters");
 
-let activated =  false;
+let activated = false;
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll",() => {
     /*If the page is scrolled to the containers elemetn and the counter are not activated */
-    // console.log("okay")
+    
     if(
-        pageYOffset > container.offsetTop - container.offsetHeight - 200 && activated === false
+        pageYOffset > container.offsetTop - container.offsetHeight - 50 && activated === false
     ){
-        counters.forEach(counter =>{
+        counters.forEach(counter => {
             
         //set counter values to zero
             counter.innerText = 0;
@@ -38,7 +38,7 @@ window.addEventListener("scroll",()=>{
         });
 
     } else if(
-        pageYOffset < container.offsetTop -container.offsetHeight - 500 || pageYOffset === 0 && activated === true){
+        pageYOffset < container.offsetTop -container.offsetHeight - 300 || pageYOffset === 0 && activated === true){
             counters.forEach(counter =>{
                 //set counter bacl to zero
                 counter.innerText = 0;
