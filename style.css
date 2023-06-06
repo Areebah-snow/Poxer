@@ -219,17 +219,21 @@ section{
     color: white;
     font-weight: bold;
     padding: 5px 3px;
-    left: 280px;
+    /* left: 280px; */
+    left:80%;
     border-radius: 3px;
 }
 .courses{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    place-items: center;
-    row-gap: 10px;
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    align-items: center;
+    /* place-items: center; */
+    /* row-gap: 10px; */
 }
 .course{
-    width: 350px;
+    /* width: 350px; */
    
     background-color: white;
     overflow: hidden;
@@ -239,9 +243,13 @@ section{
 }
 .course-img{
     overflow: hidden;
+    width: 100%;
+
 }
 .course-img img{
-    width: 350px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: all 180ms linear;
 }
 
@@ -387,6 +395,62 @@ section{
     font-size: .9em;
     line-height: 30px;
 }
+
+.blog{
+    padding: 2rem;
+    background: #ab7343;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.blog-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.blog-heading h3{
+    font-size: 2rem;
+}
+.blog-heading i{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.blog-container{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.blogs{
+    background: #fff;
+    border-radius: 1rem;
+}
+.blog-image{
+    height: 20rem;
+    overflow: hidden;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.blog-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-content{
+    padding: 1rem;
+}
+.blog-content h3{
+    padding: .8rem 0;
+}
+.blog-content a{
+    color: #ab7343;
+    margin-top: 1rem;
+}
+
 @media  screen and (max-width: 900px) and (min-width:501px) {
     .counters > div{
         grid-template-columns: 1fr 1fr;
