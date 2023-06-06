@@ -65,8 +65,8 @@ nav ul li a{
 .apply-button{
     border: 2px solid white;
     padding: 8px 15px;
-    
-    border-radius: 30px;
+    color: white;
+    border-radius: 6px;
     background-color: #ab7343;
     border: none;
 }
@@ -192,7 +192,7 @@ section{
     display: flex;
     justify-content: space-between;
 }
-.courses-heading h1::after{
+.heading::after{
     content: '';
 
     width: 80px;
@@ -235,7 +235,7 @@ section{
     overflow: hidden;
     border-radius: 15px;
     margin-block: 30px;
-    box-shadow: 0 1px 3px 0 burlywood;
+    box-shadow: 0 1px 10px 0 rgb(230, 202, 165);
 }
 .course-img{
     overflow: hidden;
@@ -295,24 +295,98 @@ section{
     justify-content: space-between;
     align-items: center;
     margin: 30px 40px;
+    height: 400px;
 }
 
 .ad-left{
-    width: 300px;
+    width: 400px;
+}
+.future-h{
+    font-size: 2.2rem;
 }
 
+.ad-left p{
+    font-size: .8rem;
+    margin-block: 20px;
+    line-height: 20px;
+}
+
+.ad-left a{
+    background-color: #ab7343;
+    padding: 8px 10px;
+    color: white;
+    border-radius: 6px;
+}
 .video-container {
     width: 500px;
     max-width: 600px;
     margin:  auto;
+    border-radius: 20px;
+    overflow: hidden;
    
   }
 
   video {
     width: 100%;
     height: auto;
+   
   }
 
+  .testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+
+  .student-testimonial{
+    width: 550px;
+  }
+
+  .student-img{
+    height: 400px ;
+   
+    overflow: hidden;
+   border-radius: 30px;
+  }
+  .student-img img{
+    width: 400px;
+    
+    
+  }
+
+  /* .student-img::before{
+    content: url("images/icons8-quote-left-50.png");
+
+    color: black;
+    z-index: 1000;
+    position: relative;
+    top: -570px;
+
+  } */
+
+  .display-pic img{
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .profile{
+    margin-block: 30px;
+    display: flex;
+  }
+.profile-details{
+    margin-left: 20px;
+    text-align: left;
+}
+
+.profile-details p{
+    font-size: .8rem;
+}
+  
+.quotes{
+    font-size: .9em;
+    line-height: 30px;
+}
 @media  screen and (max-width: 900px) and (min-width:501px) {
     .counters > div{
         grid-template-columns: 1fr 1fr;
