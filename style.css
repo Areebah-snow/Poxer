@@ -285,6 +285,34 @@ section{
     margin-left: 5px;
 }
    
+.future{
+    width: 100% !important;
+    background-color: rgba(224, 188, 156,.5);
+}
+
+.ad-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 40px;
+}
+
+.ad-left{
+    width: 300px;
+}
+
+.video-container {
+    width: 500px;
+    max-width: 600px;
+    margin:  auto;
+   
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+
 @media  screen and (max-width: 900px) and (min-width:501px) {
     .counters > div{
         grid-template-columns: 1fr 1fr;
@@ -295,6 +323,9 @@ section{
     
 }
 
+
+
+ 
 @media screen and (max-width: 500px){
     .counters > div{
         grid-template-columns: 1fr;
