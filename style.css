@@ -481,7 +481,20 @@ section{
     
 }
 
-
+footer{
+    background-color: rgba(224, 188, 156,.5);
+  
+}
+.footer-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+   width: 95%;
+   margin-inline: auto;
+   padding-block: 40px;
+  
+  
+  
+}
 
  
 @media screen and (max-width: 500px){
