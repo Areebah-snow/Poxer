@@ -171,7 +171,7 @@ section{
 }
 .counter h1{
     font-size: 2em;
-    margin-bottom: ;
+    
 }
 
 .counter p{
@@ -458,6 +458,19 @@ section{
     margin-top: 1rem;
 }
 
+.newsletter{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+.newsletter p{
+    margin-block: 20px;
+}
 @media  screen and (max-width: 900px) and (min-width:501px) {
     .counters > div{
         grid-template-columns: 1fr 1fr;
