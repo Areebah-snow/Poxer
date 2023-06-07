@@ -486,16 +486,31 @@ footer{
   
 }
 .footer-div{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
    width: 95%;
    margin-inline: auto;
-   padding-block: 40px;
+   padding-block: 60px;
   
   
   
 }
+.title-footer h1{
+   margin-bottom: 15px;
+}
+li:nth-child(1){
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
 
+.footer-div div ul li{
+    padding-block: 6px;
+
+}
  
 @media screen and (max-width: 500px){
     .counters > div{
